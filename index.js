@@ -10,6 +10,7 @@ const bodyParser = require("body-parser");
 const request = require("request");
 const restService = express();
 const GIPHY_TOKEN =  process.env.giphy; // Defined as env var on Heroku
+console.log(GIPHY_TOKEN);
 restService.use(
   bodyParser.urlencoded({ extended: true })
 );
