@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jlucena97/GranCapibot.git"
+    "url": "git+https://github.com/NievesBorrero/GranCapibot.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jlucena97/GranCapibot/issues"
+    "url": "https://github.com/NievesBorrero/GranCapibot/issues"
   },
-  "homepage": "https://github.com/jlucena97/GranCapibot#readme",
+  "homepage": "https://github.com/NievesBorrero/GranCapibot#readme",
   "dependencies": {
     "apiai": "^4.0.3",
     "body-parser": "^1.18.2",
