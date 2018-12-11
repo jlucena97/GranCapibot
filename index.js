@@ -1,9 +1,16 @@
+/**
+* Webhook for Dialogflow V1
+* @author Pablo Leon & Nieves Borrero
+*/
+
+"use strict";
+
 const express = require("express");
 const bodyParser = require("body-parser");
 const request = require("request");
 const restService = express();
 const GIPHY_TOKEN =  process.env.giphy; // Defined as env var on Heroku
-console.log(GIPHY_TOKEN);
+//console.log(GIPHY_TOKEN);
 
 restService.use(
   bodyParser.urlencoded({ extended: true })
