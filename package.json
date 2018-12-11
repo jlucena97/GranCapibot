@@ -2,9 +2,9 @@
   "name": "grancapibot",
   "version": "1.0.0",
   "description": "",
-  "main": "./index.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node ./index.js"
+    "start": "node index.js"
   },
   "engines": {
     "node": "8.12.0"
