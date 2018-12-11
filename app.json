@@ -1,7 +1,7 @@
 {
   "name": "GranCapibot Webhook",
   "description": "Webhook for the chatbot -GranCapibot - DAW_2018 - Jose Lucena  & Juan Rueda",
-  "repository": "https://github.com/jlucena97/GranCapibot",
+  "repository": "https://github.com/NievesBorrero/GranCapibot",
   "logo": "./logogc.jpg",
   "keywords": ["dialogflow", "telegram", "assistant"],
   "env": {
