@@ -1,12 +1,12 @@
 {
   "name": "GranCapibot Webhook",
-  "description": "Webhook for the chatbot -GranCapibot - DAW_2018 - Jose Lucena  & Juan Rueda",
-  "repository": "https://github.com/jlucena97/GranCapibot",
+  "description": "Webhook for the chatbot -GranCapibot - DAW_2018 - Nieves Borrero  & Pablo León",
+  "repository": "https://github.com/Proyecto-chatbot/GranCapibot",
   "logo": "./logogc.jpg",
   "keywords": ["dialogflow", "telegram", "assistant"],
   "env": {
     "APP_NAME": {
-      "description": "Project GranCapibot - DAW_2018 - Jose Lucena  & Juan Rueda",
+      "description": "Project GranCapibot - DAW_2018 - Nieves Borrero  & Pablo León",
       "value": "grancapibot"
     },
     "APIAI_LANG": {
@@ -16,6 +16,6 @@
     }
   },
   "engines": {
-    "node": "8.12.0"
+    "node": "5.10.1"
   }
 }
