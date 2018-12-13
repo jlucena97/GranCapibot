@@ -13,6 +13,10 @@
       "description": "Agent language",
       "value": "es",
       "required": false
+    },
+    "giphy": {
+      "description": "Soy subnormal",
+      "value": "aCNIGQ4MwC060tFQxUQ8YtNy4zDqQ6kO"
     }
   },
   "engines": {

@@ -24,7 +24,9 @@
     "express": "^4.16.3",
     "node-telegram-bot-api": "^0.30.0",
     "node-uuid": "^1.4.8",
-    "request": "^2.85.0",
-    "@types/node": "8.10.10"
+    "request": "^2.85.0"
+  },
+  "engines": {
+    "node": "8.10.10"
   }
 }
