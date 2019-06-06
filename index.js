@@ -21,7 +21,7 @@ restService.use(bodyParser.json());
 * Webhook connected to Dialogflow through Heroku app
 */
 restService.get("/webhook",function(req,res){
-	let response;
+	var respuesta;
 	/*let promise;
 	let tag = req.body.result.action //We can change the tag to get differents gifs 
  	promise = new Promise(function(resolve){
@@ -49,12 +49,12 @@ restService.get("/webhook",function(req,res){
 
 	request(options, function (error, response, body) {
 		if (error) throw new Error(error);
-		response = res.send(JSON.parse(body).data.images.original.url);
+		respuesta = JSON.parse(body).data.images.original.url;
 		return res.json({
 			messages:[
 		  {
 				type : 3,
-				imageUrl : response
+				imageUrl : respuesta
 		  }
 			],
 			source : "webhook-echo-sample"
