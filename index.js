@@ -45,7 +45,26 @@ restService.get("/webhook",function(req,res){
 });
 
 restService.get('/', (req, res) => {
-	res.send('I am in Miami!');
+	var options = { method: 'GET',
+		url: 'http://api.giphy.com/v1/gifs/random',
+		qs: { tag: 'party', api_key: 'fOrbc4xCvjkD29N0UPFtH6E2SCIerdi8' },
+		body: '{}' };
+
+	request(options, function (error, response, body) {
+		if (error) throw new Error(error);
+		res.send(JSON.parse(body).data.images.original.url);
+		/*return res.json({
+			messages:[
+		  {
+				type : 3,
+				imageUrl : response
+		  }
+			],
+			source : "webhook-echo-sample"
+		  });*/
+		console.log(body);
+	});
+
 });
 
 restService.listen(process.env.PORT || 8000, function() {
