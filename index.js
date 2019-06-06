@@ -59,7 +59,7 @@ restService.get("/webhook",function(req,res){
 			],
 			source : "webhook-echo-sample"
 		  });*/
-		  return res.json({
+		  res.send({
 			telegram: {
 				text: "(https://media1.giphy.com/media/v9o9eIT8sr9hm/giphy.gif).",
 				parse_mode: "Markdown"
