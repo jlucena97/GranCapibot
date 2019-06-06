@@ -52,8 +52,8 @@ restService.get('/', (req, res) => {
 
 	request(options, function (error, response, body) {
 		if (error) throw new Error(error);
-		res.send(JSON.parse(body).data.images.original.url);
-		/*return res.json({
+		//res.send(JSON.parse(body).data.images.original.url);
+		return res.json({
 			messages:[
 		  {
 				type : 3,
@@ -61,9 +61,9 @@ restService.get('/', (req, res) => {
 		  }
 			],
 			source : "webhook-echo-sample"
-		  });*/
+		  });
 		console.log(body);
-	});
+	}); 
 
 });
 
