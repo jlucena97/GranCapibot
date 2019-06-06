@@ -59,11 +59,17 @@ restService.get("/webhook",function(req,res){
 			],
 			source : "webhook-echo-sample"
 		  });*/
-		  res.send({
-			telegram: {
-				text: "(https://media1.giphy.com/media/v9o9eIT8sr9hm/giphy.gif).",
-				parse_mode: "Markdown"
-			  }
+		  return res.json({
+			"fulfillmentText": "This is a text response",
+			"fulfillmentMessages": [
+			{
+				"card": {
+				"title": "card title",
+				"subtitle": "card text",
+				"imageUri": respuesta,
+				}
+			}
+			]
 		  });
 	});
 });
