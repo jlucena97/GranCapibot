@@ -41,7 +41,11 @@ restService.get("/webhook",function(req,res){
 	    	},
     
   		);
-  	});
+	  });
+});
+
+restService.get('/', (req, res) => {
+	res.send('I am in Miami!');
 });
 
 restService.listen(process.env.PORT || 8000, function() {
