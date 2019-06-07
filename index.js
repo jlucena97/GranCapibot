@@ -22,29 +22,12 @@ restService.use(bodyParser.json());
 */
 restService.post("/webhook",function(req,res){
 	var respuesta;
-	/*let promise;
-	let tag = req.body.result.action //We can change the tag to get differents gifs 
- 	promise = new Promise(function(resolve){
-    	request("http://api.giphy.com/v1/gifs/random?api_key=fOrbc4xCvjkD29N0UPFtH6E2SCIerdi8&tag=party&rating=PG-13",function(err,res,body){
-      		resolve(response = JSON.parse(body).data.images.original.url)
-    	});
-  	});
-  	promise.then(function(response){
-    	return res.json({
-      		messages:[
-        	{
-          		type : 3,
-          		imageUrl : response
-        	}
-      		],
-      		source : "webhook-echo-sample"
-	    	},
-    
-  		);
-	  });*/
+	let promise;
+	let tags = req.body.result.action //We can change the tag to get differents gifs 
+
 	  var options = { method: 'GET',
 		url: 'http://api.giphy.com/v1/gifs/random',
-		qs: { tag: 'party', api_key: 'fOrbc4xCvjkD29N0UPFtH6E2SCIerdi8' },
+		qs: { tag: tags, api_key: 'fOrbc4xCvjkD29N0UPFtH6E2SCIerdi8' },
 		body: '{}' };
 
 	request(options, function (error, response, body) {
