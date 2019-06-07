@@ -27,7 +27,7 @@ restService.post("/webhook",function(req,res){
 
 	  var options = { method: 'GET',
 		url: 'http://api.giphy.com/v1/gifs/random',
-		qs: { tag: tags, api_key: 'fOrbc4xCvjkD29N0UPFtH6E2SCIerdi8' },
+		qs: { tag: tags, api_key: GIPHY_TOKEN },
 		body: '{}' };
 
 	request(options, function (error, response, body) {
