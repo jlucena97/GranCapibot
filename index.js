@@ -50,7 +50,7 @@ restService.get("/webhook",function(req,res){
 	request(options, function (error, response, body) {
 		if (error) throw new Error(error);
 		respuesta = JSON.parse(body).data.images.original.url;
-		/*return res.json({
+		return res.json({
 			messages:[
 		  {
 				type : 3,
@@ -58,18 +58,6 @@ restService.get("/webhook",function(req,res){
 		  }
 			],
 			source : "webhook-echo-sample"
-		  });*/
-		  return res.json({
-			"fulfillmentText": "This is a text response",
-			"fulfillmentMessages": [
-			{
-				"card": {
-				"title": "card title",
-				"subtitle": "card text",
-				"imageUri": respuesta,
-				}
-			}
-			]
 		  });
 	});
 });
