@@ -20,7 +20,7 @@ restService.use(bodyParser.json());
 /**
 * Webhook connected to Dialogflow through Heroku app
 */
-restService.get("/webhook",function(req,res){
+restService.post("/webhook",function(req,res){
 	var respuesta;
 	/*let promise;
 	let tag = req.body.result.action //We can change the tag to get differents gifs 
@@ -44,7 +44,7 @@ restService.get("/webhook",function(req,res){
 	  });*/
 	  var options = { method: 'GET',
 		url: 'http://api.giphy.com/v1/gifs/random',
-		qs: { tag: 'party', api_key: 'fOrbc4xCvjkD29N0UPFtH6E2SCIerdi8' },
+		qs: { tag: 'party', api_key: GIPHY_TOKEN },
 		body: '{}' };
 
 	request(options, function (error, response, body) {
