@@ -45,7 +45,7 @@ restService.post("/webhook",function(req,res){
 		url: 'http://api.giphy.com/v1/gifs/random',
 		qs: { tag: 'party', api_key: GIPHY_TOKEN },
 		body: '{}' };
-	  res.send(options);	
+		
 	request(options, function (error, response, body) {
 		if (error) throw new Error(error);
 		respuesta = JSON.parse(body).data.images.original.url;
