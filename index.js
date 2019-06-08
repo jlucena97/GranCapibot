@@ -26,7 +26,7 @@ restService.get("/webhook",function(req,res){
 	let tags = req.body.result.action //We can change the tag to get differents gifs 
 
 	  var options = { method: 'GET',
-		url: 'http://api.giphy.com/v1/gifs/random',
+		url: 'https://api.giphy.com/v1/gifs/random',
 		qs: { tag: 'party', api_key: 'fOrbc4xCvjkD29N0UPFtH6E2SCIerdi8' },
 		body: '{}' };
 
