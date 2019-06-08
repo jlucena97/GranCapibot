@@ -22,8 +22,7 @@ restService.use(bodyParser.json());
 */
 restService.get("/webhook",function(req,res){
 	var respuesta;
-	let tag = req.body; //We can change the tag to get differents gifs /*
-	res.send(tag);
+	let tag = req.body.result.action //We can change the tag to get differents gifs /*
  	/*promise = new Promise(function(resolve){
     	request("http://api.giphy.com/v1/gifs/random?api_key=fOrbc4xCvjkD29N0UPFtH6E2SCIerdi8&tag=party&rating=PG-13",function(err,res,body){
       		resolve(response = JSON.parse(body).data.images.original.url)
@@ -42,6 +41,7 @@ restService.get("/webhook",function(req,res){
     
   		);
 	  });*/
+	  res.send(GIPHY_TOKEN);
 	  var options = { method: 'GET',
 		url: 'http://api.giphy.com/v1/gifs/random',
 		qs: { tag: tag, api_key: GIPHY_TOKEN },
